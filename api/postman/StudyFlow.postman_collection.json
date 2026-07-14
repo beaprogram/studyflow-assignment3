@@ -1,0 +1,213 @@
+{
+  "info": {
+    "name": "StudyFlow API",
+    "description": "CSCI 4177/5709 Assignment 2 - StudyFlow REST API. Set the {{baseUrl}} collection variable to your deployment (e.g. https://studyflow-api.onrender.com). Run requests top to bottom: Login stores {{token}} automatically.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:5000" },
+    { "key": "token", "value": "" },
+    { "key": "courseId", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Register (success)",
+          "event": [
+            { "listen": "test", "script": { "exec": [
+              "pm.test('201 created', () => pm.response.to.have.status(201));",
+              "const j = pm.response.json();",
+              "if (j.token) pm.collectionVariables.set('token', j.token);"
+            ], "type": "text/javascript" } }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/api/v1/auth/register", "host": ["{{baseUrl}}"], "path": ["api","v1","auth","register"] },
+            "body": { "mode": "raw", "raw": "{\n  \"fullName\": \"Maya Okonkwo\",\n  \"email\": \"maya@dal.ca\",\n  \"password\": \"Password1!\",\n  \"role\": \"student\"\n}" }
+          }
+        },
+        {
+          "name": "Register (weak password -> 422)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/api/v1/auth/register", "host": ["{{baseUrl}}"], "path": ["api","v1","auth","register"] },
+            "body": { "mode": "raw", "raw": "{\n  \"fullName\": \"Test\",\n  \"email\": \"test@dal.ca\",\n  \"password\": \"weak\"\n}" }
+          }
+        },
+        {
+          "name": "Login (success)",
+          "event": [
+            { "listen": "test", "script": { "exec": [
+              "pm.test('200 ok', () => pm.response.to.have.status(200));",
+              "const j = pm.response.json();",
+              "if (j.token) pm.collectionVariables.set('token', j.token);"
+            ], "type": "text/javascript" } }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/api/v1/auth/login", "host": ["{{baseUrl}}"], "path": ["api","v1","auth","login"] },
+            "body": { "mode": "raw", "raw": "{\n  \"email\": \"maya@dal.ca\",\n  \"password\": \"Password1!\"\n}" }
+          }
+        },
+        {
+          "name": "Login (wrong password -> 401)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/api/v1/auth/login", "host": ["{{baseUrl}}"], "path": ["api","v1","auth","login"] },
+            "body": { "mode": "raw", "raw": "{\n  \"email\": \"maya@dal.ca\",\n  \"password\": \"WrongPass1!\"\n}" }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Courses",
+      "item": [
+        {
+          "name": "Create course (201)",
+          "event": [
+            { "listen": "test", "script": { "exec": [
+              "pm.test('201 created', () => pm.response.to.have.status(201));",
+              "const j = pm.response.json();",
+              "if (j.course) pm.collectionVariables.set('courseId', j.course._id);"
+            ], "type": "text/javascript" } }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": { "raw": "{{baseUrl}}/api/v1/courses", "host": ["{{baseUrl}}"], "path": ["api","v1","courses"] },
+            "body": { "mode": "raw", "raw": "{\n  \"code\": \"MKTG 3220\",\n  \"title\": \"Marketing Research\",\n  \"instructorName\": \"Dr. Chen\",\n  \"creditHours\": 3,\n  \"colour\": \"#6366F1\",\n  \"term\": \"Fall 2026\"\n}" }
+          }
+        },
+        {
+          "name": "Create course (no token -> 401)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/api/v1/courses", "host": ["{{baseUrl}}"], "path": ["api","v1","courses"] },
+            "body": { "mode": "raw", "raw": "{\n  \"code\": \"X\",\n  \"title\": \"Y\"\n}" }
+          }
+        },
+        {
+          "name": "Create course (invalid -> 422)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": { "raw": "{{baseUrl}}/api/v1/courses", "host": ["{{baseUrl}}"], "path": ["api","v1","courses"] },
+            "body": { "mode": "raw", "raw": "{\n  \"title\": \"\"\n}" }
+          }
+        },
+        {
+          "name": "List courses (200)",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+            "url": { "raw": "{{baseUrl}}/api/v1/courses?page=1&limit=20", "host": ["{{baseUrl}}"], "path": ["api","v1","courses"], "query": [ { "key": "page", "value": "1" }, { "key": "limit", "value": "20" } ] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tasks",
+      "item": [
+        {
+          "name": "Create task (201)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": { "raw": "{{baseUrl}}/api/v1/tasks", "host": ["{{baseUrl}}"], "path": ["api","v1","tasks"] },
+            "body": { "mode": "raw", "raw": "{\n  \"courseId\": \"{{courseId}}\",\n  \"title\": \"Chapter 4-5 Reading\",\n  \"type\": \"reading\",\n  \"dueDate\": \"2026-11-12T23:59:00Z\",\n  \"estimatedHours\": 3,\n  \"priority\": \"high\"\n}" }
+          }
+        },
+        {
+          "name": "List tasks (200)",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+            "url": { "raw": "{{baseUrl}}/api/v1/tasks", "host": ["{{baseUrl}}"], "path": ["api","v1","tasks"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Availability & Preferences",
+      "item": [
+        {
+          "name": "Set availability (PUT)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": { "raw": "{{baseUrl}}/api/v1/availability", "host": ["{{baseUrl}}"], "path": ["api","v1","availability"] },
+            "body": { "mode": "raw", "raw": "{\n  \"timezone\": \"America/Halifax\",\n  \"slots\": [\n    { \"dayOfWeek\": 0, \"startHour\": 18, \"endHour\": 22, \"state\": \"available\" },\n    { \"dayOfWeek\": 6, \"startHour\": 10, \"endHour\": 14, \"state\": \"available\" }\n  ]\n}" }
+          }
+        },
+        {
+          "name": "Set preferences (PUT)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": { "raw": "{{baseUrl}}/api/v1/preferences", "host": ["{{baseUrl}}"], "path": ["api","v1","preferences"] },
+            "body": { "mode": "raw", "raw": "{\n  \"maxStudyHoursPerDay\": 4,\n  \"preferredFocusWindows\": [\"evening\", \"late_night\"],\n  \"schedulingStyle\": \"balanced\"\n}" }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Schedule (AI)",
+      "item": [
+        {
+          "name": "Generate schedule (201)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": { "raw": "{{baseUrl}}/api/v1/schedule/generate", "host": ["{{baseUrl}}"], "path": ["api","v1","schedule","generate"] },
+            "body": { "mode": "raw", "raw": "{\n  \"weekStart\": \"2026-11-09\"\n}" }
+          }
+        },
+        {
+          "name": "Get current schedule (200)",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+            "url": { "raw": "{{baseUrl}}/api/v1/schedule/current?weekStart=2026-11-09", "host": ["{{baseUrl}}"], "path": ["api","v1","schedule","current"], "query": [ { "key": "weekStart", "value": "2026-11-09" } ] }
+          }
+        },
+        {
+          "name": "Log completion (201)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": { "raw": "{{baseUrl}}/api/v1/schedule/completions", "host": ["{{baseUrl}}"], "path": ["api","v1","schedule","completions"] },
+            "body": { "mode": "raw", "raw": "{\n  \"taskId\": \"<paste a real task _id>\",\n  \"outcome\": \"completed\"\n}" }
+          }
+        }
+      ]
+    }
+  ]
+}

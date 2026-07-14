@@ -1,0 +1,146 @@
+{
+  "_comment": "StudyFlow seed data. Passwords shown here are PLAINTEXT for reference only; the seed script hashes them with bcrypt before insertion. Demo password for every account: Password1!",
+  "users": [
+    {
+      "_id": "650000000000000000000001",
+      "fullName": "Maya Okonkwo",
+      "email": "maya@dal.ca",
+      "password": "Password1!",
+      "role": "student",
+      "status": "active"
+    },
+    {
+      "_id": "650000000000000000000002",
+      "fullName": "Dr. Eric Tanaka",
+      "email": "tanaka@dal.ca",
+      "password": "Password1!",
+      "role": "instructor",
+      "status": "active"
+    },
+    {
+      "_id": "650000000000000000000003",
+      "fullName": "Admin User",
+      "email": "admin@dal.ca",
+      "password": "Password1!",
+      "role": "admin",
+      "status": "active"
+    }
+  ],
+  "courses": [
+    {
+      "_id": "660000000000000000000001",
+      "owner": "650000000000000000000001",
+      "code": "MKTG 3220",
+      "title": "Marketing Research",
+      "instructorName": "Dr. Chen",
+      "creditHours": 3,
+      "colour": "#6366F1",
+      "term": "Fall 2026"
+    },
+    {
+      "_id": "660000000000000000000002",
+      "owner": "650000000000000000000001",
+      "code": "STAT 2080",
+      "title": "Statistics for Business",
+      "instructorName": "Dr. Patel",
+      "creditHours": 3,
+      "colour": "#A855F7",
+      "term": "Fall 2026"
+    },
+    {
+      "_id": "660000000000000000000003",
+      "owner": "650000000000000000000001",
+      "code": "COMM 2101",
+      "title": "Business Communication",
+      "instructorName": "Prof. Singh",
+      "creditHours": 3,
+      "colour": "#D97706",
+      "term": "Fall 2026"
+    }
+  ],
+  "tasks": [
+    {
+      "_id": "670000000000000000000001",
+      "owner": "650000000000000000000001",
+      "course": "660000000000000000000001",
+      "title": "Research Methods Midterm",
+      "type": "exam",
+      "dueDate": "2026-11-14T23:59:00.000Z",
+      "estimatedHours": 6,
+      "priority": "high",
+      "status": "in_progress"
+    },
+    {
+      "_id": "670000000000000000000002",
+      "owner": "650000000000000000000001",
+      "course": "660000000000000000000001",
+      "title": "Survey Design Assignment",
+      "type": "assignment",
+      "dueDate": "2026-11-18T23:59:00.000Z",
+      "estimatedHours": 4,
+      "priority": "medium",
+      "status": "not_started"
+    },
+    {
+      "_id": "670000000000000000000003",
+      "owner": "650000000000000000000001",
+      "course": "660000000000000000000001",
+      "title": "Chapter 4-5 Reading",
+      "type": "reading",
+      "dueDate": "2026-11-12T23:59:00.000Z",
+      "estimatedHours": 3,
+      "priority": "high",
+      "status": "in_progress"
+    },
+    {
+      "_id": "670000000000000000000004",
+      "owner": "650000000000000000000001",
+      "course": "660000000000000000000003",
+      "title": "Group Project Proposal",
+      "type": "project",
+      "dueDate": "2026-11-22T23:59:00.000Z",
+      "estimatedHours": 5,
+      "priority": "medium",
+      "status": "not_started"
+    },
+    {
+      "_id": "670000000000000000000005",
+      "owner": "650000000000000000000001",
+      "course": "660000000000000000000002",
+      "title": "Problem Set 3",
+      "type": "assignment",
+      "dueDate": "2026-11-16T23:59:00.000Z",
+      "estimatedHours": 3,
+      "priority": "medium",
+      "status": "not_started"
+    }
+  ],
+  "availabilities": [
+    {
+      "_id": "680000000000000000000001",
+      "owner": "650000000000000000000001",
+      "timezone": "America/Halifax",
+      "slots": [
+        { "dayOfWeek": 0, "startHour": 18, "endHour": 22, "state": "available" },
+        { "dayOfWeek": 1, "startHour": 16, "endHour": 22, "state": "work" },
+        { "dayOfWeek": 2, "startHour": 18, "endHour": 22, "state": "available" },
+        { "dayOfWeek": 3, "startHour": 16, "endHour": 22, "state": "work" },
+        { "dayOfWeek": 4, "startHour": 9, "endHour": 12, "state": "available" },
+        { "dayOfWeek": 5, "startHour": 10, "endHour": 16, "state": "available" },
+        { "dayOfWeek": 6, "startHour": 10, "endHour": 14, "state": "available" }
+      ]
+    }
+  ],
+  "preferences": [
+    {
+      "_id": "690000000000000000000001",
+      "owner": "650000000000000000000001",
+      "maxStudyHoursPerDay": 4,
+      "preferredFocusWindows": ["evening", "late_night"],
+      "minBreakMinutes": 15,
+      "emailRemindersEnabled": true,
+      "reminderLeadHours": 24,
+      "schedulingStyle": "balanced"
+    }
+  ]
+}

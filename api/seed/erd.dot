@@ -1,0 +1,110 @@
+digraph StudyFlowERD {
+  graph [rankdir=LR, fontname="Helvetica", fontsize=11, nodesep=0.5, ranksep=1.1, bgcolor="white", pad=0.3];
+  node  [shape=plaintext, fontname="Helvetica", fontsize=10];
+  edge  [fontname="Helvetica", fontsize=9, color="#555555"];
+
+  User [label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+      <TR><TD BGCOLOR="#4F46E5" COLSPAN="2"><FONT COLOR="white"><B>User</B></FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><B>_id</B> PK</TD><TD ALIGN="LEFT">ObjectId</TD></TR>
+      <TR><TD ALIGN="LEFT">fullName *</TD><TD ALIGN="LEFT">String</TD></TR>
+      <TR><TD ALIGN="LEFT">email * (unique)</TD><TD ALIGN="LEFT">String</TD></TR>
+      <TR><TD ALIGN="LEFT">passwordHash *</TD><TD ALIGN="LEFT">String</TD></TR>
+      <TR><TD ALIGN="LEFT">role *</TD><TD ALIGN="LEFT">enum</TD></TR>
+      <TR><TD ALIGN="LEFT">status *</TD><TD ALIGN="LEFT">enum</TD></TR>
+      <TR><TD ALIGN="LEFT">lastLoginAt</TD><TD ALIGN="LEFT">Date</TD></TR>
+    </TABLE>>];
+
+  Course [label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+      <TR><TD BGCOLOR="#0EA5E9" COLSPAN="2"><FONT COLOR="white"><B>Course</B></FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><B>_id</B> PK</TD><TD ALIGN="LEFT">ObjectId</TD></TR>
+      <TR><TD ALIGN="LEFT">owner * FK</TD><TD ALIGN="LEFT">ObjectId</TD></TR>
+      <TR><TD ALIGN="LEFT">code *</TD><TD ALIGN="LEFT">String</TD></TR>
+      <TR><TD ALIGN="LEFT">title *</TD><TD ALIGN="LEFT">String</TD></TR>
+      <TR><TD ALIGN="LEFT">instructorName</TD><TD ALIGN="LEFT">String</TD></TR>
+      <TR><TD ALIGN="LEFT">creditHours</TD><TD ALIGN="LEFT">Number</TD></TR>
+      <TR><TD ALIGN="LEFT">colour</TD><TD ALIGN="LEFT">String</TD></TR>
+      <TR><TD ALIGN="LEFT">term</TD><TD ALIGN="LEFT">String</TD></TR>
+    </TABLE>>];
+
+  Task [label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+      <TR><TD BGCOLOR="#16A34A" COLSPAN="2"><FONT COLOR="white"><B>Task</B></FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><B>_id</B> PK</TD><TD ALIGN="LEFT">ObjectId</TD></TR>
+      <TR><TD ALIGN="LEFT">owner * FK</TD><TD ALIGN="LEFT">ObjectId</TD></TR>
+      <TR><TD ALIGN="LEFT">course * FK</TD><TD ALIGN="LEFT">ObjectId</TD></TR>
+      <TR><TD ALIGN="LEFT">title *</TD><TD ALIGN="LEFT">String</TD></TR>
+      <TR><TD ALIGN="LEFT">type *</TD><TD ALIGN="LEFT">enum</TD></TR>
+      <TR><TD ALIGN="LEFT">dueDate *</TD><TD ALIGN="LEFT">Date</TD></TR>
+      <TR><TD ALIGN="LEFT">estimatedHours *</TD><TD ALIGN="LEFT">Number</TD></TR>
+      <TR><TD ALIGN="LEFT">priority *</TD><TD ALIGN="LEFT">enum</TD></TR>
+      <TR><TD ALIGN="LEFT">status *</TD><TD ALIGN="LEFT">enum</TD></TR>
+      <TR><TD ALIGN="LEFT">notes</TD><TD ALIGN="LEFT">String</TD></TR>
+    </TABLE>>];
+
+  Availability [label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+      <TR><TD BGCOLOR="#D97706" COLSPAN="2"><FONT COLOR="white"><B>Availability</B></FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><B>_id</B> PK</TD><TD ALIGN="LEFT">ObjectId</TD></TR>
+      <TR><TD ALIGN="LEFT">owner * FK (unique)</TD><TD ALIGN="LEFT">ObjectId</TD></TR>
+      <TR><TD ALIGN="LEFT">timezone</TD><TD ALIGN="LEFT">String</TD></TR>
+      <TR><TD ALIGN="LEFT">slots[ ] *</TD><TD ALIGN="LEFT">embedded</TD></TR>
+      <TR><TD ALIGN="LEFT">&nbsp;&nbsp;dayOfWeek *</TD><TD ALIGN="LEFT">Number</TD></TR>
+      <TR><TD ALIGN="LEFT">&nbsp;&nbsp;startHour *</TD><TD ALIGN="LEFT">Number</TD></TR>
+      <TR><TD ALIGN="LEFT">&nbsp;&nbsp;endHour *</TD><TD ALIGN="LEFT">Number</TD></TR>
+      <TR><TD ALIGN="LEFT">&nbsp;&nbsp;state *</TD><TD ALIGN="LEFT">enum</TD></TR>
+    </TABLE>>];
+
+  Preferences [label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+      <TR><TD BGCOLOR="#DB2777" COLSPAN="2"><FONT COLOR="white"><B>Preferences</B></FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><B>_id</B> PK</TD><TD ALIGN="LEFT">ObjectId</TD></TR>
+      <TR><TD ALIGN="LEFT">owner * FK (unique)</TD><TD ALIGN="LEFT">ObjectId</TD></TR>
+      <TR><TD ALIGN="LEFT">maxStudyHoursPerDay</TD><TD ALIGN="LEFT">Number</TD></TR>
+      <TR><TD ALIGN="LEFT">preferredFocusWindows[ ]</TD><TD ALIGN="LEFT">enum[ ]</TD></TR>
+      <TR><TD ALIGN="LEFT">minBreakMinutes</TD><TD ALIGN="LEFT">Number</TD></TR>
+      <TR><TD ALIGN="LEFT">emailRemindersEnabled</TD><TD ALIGN="LEFT">Boolean</TD></TR>
+      <TR><TD ALIGN="LEFT">reminderLeadHours</TD><TD ALIGN="LEFT">Number</TD></TR>
+      <TR><TD ALIGN="LEFT">schedulingStyle</TD><TD ALIGN="LEFT">enum</TD></TR>
+    </TABLE>>];
+
+  Schedule [label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+      <TR><TD BGCOLOR="#7C3AED" COLSPAN="2"><FONT COLOR="white"><B>Schedule</B></FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><B>_id</B> PK</TD><TD ALIGN="LEFT">ObjectId</TD></TR>
+      <TR><TD ALIGN="LEFT">owner * FK</TD><TD ALIGN="LEFT">ObjectId</TD></TR>
+      <TR><TD ALIGN="LEFT">weekStart *</TD><TD ALIGN="LEFT">Date</TD></TR>
+      <TR><TD ALIGN="LEFT">status *</TD><TD ALIGN="LEFT">enum</TD></TR>
+      <TR><TD ALIGN="LEFT">blocks[ ] *</TD><TD ALIGN="LEFT">embedded</TD></TR>
+      <TR><TD ALIGN="LEFT">&nbsp;&nbsp;task * FK</TD><TD ALIGN="LEFT">ObjectId</TD></TR>
+      <TR><TD ALIGN="LEFT">&nbsp;&nbsp;course * FK</TD><TD ALIGN="LEFT">ObjectId</TD></TR>
+      <TR><TD ALIGN="LEFT">&nbsp;&nbsp;start *</TD><TD ALIGN="LEFT">Date</TD></TR>
+      <TR><TD ALIGN="LEFT">&nbsp;&nbsp;end *</TD><TD ALIGN="LEFT">Date</TD></TR>
+      <TR><TD ALIGN="LEFT">&nbsp;&nbsp;rationale *</TD><TD ALIGN="LEFT">String</TD></TR>
+    </TABLE>>];
+
+  CompletionLog [label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+      <TR><TD BGCOLOR="#0891B2" COLSPAN="2"><FONT COLOR="white"><B>CompletionLog</B></FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><B>_id</B> PK</TD><TD ALIGN="LEFT">ObjectId</TD></TR>
+      <TR><TD ALIGN="LEFT">owner * FK</TD><TD ALIGN="LEFT">ObjectId</TD></TR>
+      <TR><TD ALIGN="LEFT">task * FK</TD><TD ALIGN="LEFT">ObjectId</TD></TR>
+      <TR><TD ALIGN="LEFT">blockId</TD><TD ALIGN="LEFT">ObjectId</TD></TR>
+      <TR><TD ALIGN="LEFT">outcome *</TD><TD ALIGN="LEFT">enum</TD></TR>
+      <TR><TD ALIGN="LEFT">percentComplete</TD><TD ALIGN="LEFT">Number</TD></TR>
+      <TR><TD ALIGN="LEFT">rescheduledTo</TD><TD ALIGN="LEFT">Date</TD></TR>
+      <TR><TD ALIGN="LEFT">notes</TD><TD ALIGN="LEFT">String</TD></TR>
+    </TABLE>>];
+
+  // Relationships (crow's-foot style approximated with labels)
+  User -> Course        [taillabel="1", headlabel="N", label="owns"];
+  User -> Task          [taillabel="1", headlabel="N", label="owns"];
+  Course -> Task        [taillabel="1", headlabel="N", label="has"];
+  User -> Availability  [taillabel="1", headlabel="1", label="has"];
+  User -> Preferences   [taillabel="1", headlabel="1", label="has"];
+  User -> Schedule      [taillabel="1", headlabel="N", label="owns"];
+  User -> CompletionLog [taillabel="1", headlabel="N", label="owns"];
+  Task -> Schedule      [taillabel="1", headlabel="N", label="scheduled in", style=dashed];
+  Task -> CompletionLog [taillabel="1", headlabel="N", label="logged in", style=dashed];
+}

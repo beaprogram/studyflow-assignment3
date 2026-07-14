@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+**/dist/
+
+# Environment files (never commit real secrets)
+.env
+.env.local
+**/.env
+!**/.env.example
+
+# JMeter run artifacts (keep exported CSVs, ignore raw logs)
+*.jtl
+jmeter.log
+**/*.jtl
+
+# OS / editor
+.DS_Store
+*.log

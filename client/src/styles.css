@@ -1,0 +1,477 @@
+/*
+  StudyFlow client styles.
+  Deliberately uses the system font stack (no downloaded web fonts) so the
+  JMeter baseline measures the app's own bundle, not third-party font traffic.
+  Palette: indigo ink on cool paper, with an amber "highlighter" accent that
+  nods to a study planner.
+*/
+
+:root {
+  --ink: #191c2e;
+  --ink-soft: #565a72;
+  --paper: #f6f7fb;
+  --surface: #ffffff;
+  --line: #e4e6ef;
+  --primary: #4338ca;
+  --primary-press: #372fa8;
+  --accent: #f59e0b;
+  --danger: #d1344a;
+  --radius: 12px;
+  --shadow: 0 1px 2px rgba(25, 28, 46, 0.04), 0 8px 24px rgba(25, 28, 46, 0.06);
+  --sans: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, 'SF Mono', 'Cascadia Mono', Menlo, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+code {
+  font-family: var(--mono);
+  font-size: 0.85em;
+  background: rgba(67, 56, 202, 0.08);
+  padding: 0.1em 0.4em;
+  border-radius: 5px;
+}
+
+/* Layout ------------------------------------------------------------------ */
+
+.app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__main {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px 64px;
+}
+
+/* Nav --------------------------------------------------------------------- */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 24px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  font-size: 1.05rem;
+}
+
+.nav__mark {
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
+  background: var(--primary);
+  box-shadow: inset 0 0 0 3px var(--accent);
+}
+
+.nav__links {
+  display: flex;
+  gap: 4px;
+  margin-left: 8px;
+}
+
+.nav__link {
+  padding: 7px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--ink-soft);
+  font-weight: 500;
+  font-size: 0.92rem;
+}
+
+.nav__link:hover {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.nav__link.active {
+  background: rgba(67, 56, 202, 0.1);
+  color: var(--primary);
+}
+
+.nav__account {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav__user {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+/* Typographic bits -------------------------------------------------------- */
+
+.eyebrow {
+  margin: 0 0 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* Auth -------------------------------------------------------------------- */
+
+.auth {
+  display: flex;
+  justify-content: center;
+  padding-top: 32px;
+}
+
+.auth__card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px;
+}
+
+.auth__title {
+  margin: 0 0 6px;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.auth__sub {
+  margin: 0 0 24px;
+  color: var(--ink-soft);
+  font-size: 0.94rem;
+}
+
+.auth__hint {
+  margin: 20px 0 0;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* Panels ------------------------------------------------------------------ */
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+}
+
+.panel--narrow {
+  max-width: 560px;
+}
+
+.panel__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.panel__title {
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+}
+
+.panel__count {
+  margin: 0 0 12px;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+/* Forms ------------------------------------------------------------------- */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field__label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.field__input {
+  font: inherit;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.field__input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.15);
+}
+
+.field__error {
+  color: var(--danger);
+  font-size: 0.8rem;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 12px;
+}
+
+.field--colour {
+  align-items: flex-start;
+}
+
+.field__colour {
+  width: 46px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+/* Buttons ----------------------------------------------------------------- */
+
+.btn {
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 10px 18px;
+  border-radius: 9px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.btn--primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn--primary:hover:not(:disabled) {
+  background: var(--primary-press);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--ink-soft);
+  border-color: var(--line);
+}
+
+.btn--ghost:hover {
+  color: var(--ink);
+  background: var(--paper);
+}
+
+/* Course list ------------------------------------------------------------- */
+
+.course-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.course {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.course__swatch {
+  width: 10px;
+  height: 40px;
+  border-radius: 5px;
+  flex: 0 0 auto;
+}
+
+.course__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.course__code {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.course__title {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.course__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+/* Stats + charts ---------------------------------------------------------- */
+
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.stat {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.stat__value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.stat__label {
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.chart-card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px;
+}
+
+.chart-card__title {
+  margin: 0 0 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Notices + empty --------------------------------------------------------- */
+
+.notice {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 9px;
+  background: var(--paper);
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.notice--error {
+  background: rgba(209, 52, 74, 0.08);
+  color: var(--danger);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 40px 0;
+  color: var(--ink-soft);
+}
+
+/* Responsive -------------------------------------------------------------- */
+
+@media (max-width: 680px) {
+  .nav {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .nav__account {
+    width: 100%;
+    margin-left: 0;
+    justify-content: space-between;
+  }
+  .field-row,
+  .chart-grid,
+  .stat-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Accessibility floor ----------------------------------------------------- */
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
