@@ -1,21 +1,27 @@
-# Monitoring — Prometheus + Grafana
+# Monitoring - Prometheus + Grafana
 
 Continuous monitoring of the StudyFlow API: CPU, memory, request latency, and
 error rate.
 
-## Files (added as we go)
+## Files
 
-- `prometheus.yml` — scrape configuration pointing at the API's `/metrics`.
-- `docker-compose.yml` — runs Prometheus and Grafana locally.
-- `grafana-dashboard.json` — the exported dashboard.
-- `screenshots/` — dashboard and panel images for the report.
+- `prometheus.yml` - scrapes the API's `/metrics` endpoint every five seconds.
+- `docker-compose.yml` - runs Prometheus and Grafana locally.
+- `grafana-datasource.yml` - provisions Prometheus as the Grafana data source.
+- `grafana-dashboard-provider.yml` - provisions dashboards from JSON files.
+- `grafana-dashboard.json` - six-panel StudyFlow dashboard.
+- `screenshots/grafana-dashboard.png` - verified dashboard evidence used in the report.
 
-## Approach
+## Run and verify
 
-1. Instrument the API with `prom-client`, exposing a `/metrics` endpoint that
-   publishes default process metrics (CPU, memory) plus a request-duration
-   histogram and an error counter.
-2. Configure Prometheus to scrape that endpoint.
-3. Add Grafana with Prometheus as its data source and build a dashboard with
-   time-series panels for CPU, memory, request latency, and error rate.
-4. Capture screenshots for the report.
+1. Start the optimized API on port 5050: `cd api && npm start`.
+2. Start monitoring: `cd monitoring && docker compose up -d`.
+3. Check Prometheus targets at `http://localhost:9090/targets`; both targets
+   should be `UP`.
+4. Open Grafana at `http://localhost:3000` (`admin` / `admin`) and open the
+   automatically provisioned `StudyFlow API - Performance & Health` dashboard.
+
+The API publishes Node process CPU and memory metrics, an HTTP latency
+histogram, request totals by status code, and an in-flight request gauge. The
+dashboard presents CPU, memory, p50/p95/p99 latency, error rate, throughput by
+route, and concurrent requests.

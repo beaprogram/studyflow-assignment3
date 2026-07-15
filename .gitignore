@@ -17,6 +17,10 @@ dist/
 jmeter.log
 **/*.jtl
 
+# Generated JMeter HTML dashboards are reproducible from the submitted CSVs.
+# Keeping them out of Git avoids committing hundreds of vendored report assets.
+jmeter/report-*/
+
 # OS / editor
 .DS_Store
 *.log

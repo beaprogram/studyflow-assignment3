@@ -1,0 +1,402 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1784136477439,315,POST Login,200,OK,setUp - Login Once 1-1,text,true,,1477,234,1,1,http://localhost:5050/api/v1/auth/login,313,0,8
+1784136478471,92,API - GET Courses,200,OK,Load - 10 users 1-1,text,true,,6739,366,1,1,http://localhost:5050/api/v1/courses?page=1&limit=20,92,0,2
+1784136479066,5,Web - GET index.html,200,OK,Load - 10 users 1-1,text,true,,791,117,1,1,http://localhost:4173/,5,0,1
+1784136479577,5,Web - GET JS bundle,200,OK,Load - 10 users 1-1,text,true,,177350,141,1,1,http://localhost:4173/assets/index-CkFmkQjD.js,4,0,0
+1784136480088,4,Web - GET CSS bundle,200,OK,Load - 10 users 1-1,text,true,,5891,142,1,1,http://localhost:4173/assets/index-DgVZD9jl.css,4,0,0
+1784136480602,44,API - GET Courses,200,OK,Load - 10 users 1-1,text,true,,6738,366,1,1,http://localhost:5050/api/v1/courses?page=1&limit=20,44,0,0
+1784136481152,4,Web - GET index.html,200,OK,Load - 10 users 1-1,text,true,,791,117,2,2,http://localhost:4173/,4,0,0
+1784136481476,44,API - GET Courses,200,OK,Load - 10 users 1-2,text,true,,6738,366,2,2,http://localhost:5050/api/v1/courses?page=1&limit=20,44,0,1
+1784136481662,4,Web - GET JS bundle,200,OK,Load - 10 users 1-1,text,true,,177350,141,2,2,http://localhost:4173/assets/index-CkFmkQjD.js,4,0,0
+1784136482027,4,Web - GET index.html,200,OK,Load - 10 users 1-2,text,true,,791,117,2,2,http://localhost:4173/,4,0,1
+1784136482172,5,Web - GET CSS bundle,200,OK,Load - 10 users 1-1,text,true,,5891,142,2,2,http://localhost:4173/assets/index-DgVZD9jl.css,4,0,0
+1784136482537,5,Web - GET JS bundle,200,OK,Load - 10 users 1-2,text,true,,177350,141,2,2,http://localhost:4173/assets/index-CkFmkQjD.js,5,0,0
+1784136482683,43,API - GET Courses,200,OK,Load - 10 users 1-1,text,true,,6738,366,2,2,http://localhost:5050/api/v1/courses?page=1&limit=20,43,0,0
+1784136483048,4,Web - GET CSS bundle,200,OK,Load - 10 users 1-2,text,true,,5891,142,2,2,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136483232,3,Web - GET index.html,200,OK,Load - 10 users 1-1,text,true,,791,117,2,2,http://localhost:4173/,3,0,0
+1784136483555,39,API - GET Courses,200,OK,Load - 10 users 1-2,text,true,,6738,366,2,2,http://localhost:5050/api/v1/courses?page=1&limit=20,39,0,0
+1784136483738,4,Web - GET JS bundle,200,OK,Load - 10 users 1-1,text,true,,177350,141,2,2,http://localhost:4173/assets/index-CkFmkQjD.js,4,0,0
+1784136484095,4,Web - GET index.html,200,OK,Load - 10 users 1-2,text,true,,791,117,3,3,http://localhost:4173/,3,0,0
+1784136484248,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-1,text,true,,5891,142,3,3,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136484467,39,API - GET Courses,200,OK,Load - 10 users 1-3,text,true,,6738,366,3,3,http://localhost:5050/api/v1/courses?page=1&limit=20,39,0,2
+1784136484605,4,Web - GET JS bundle,200,OK,Load - 10 users 1-2,text,true,,177350,141,3,3,http://localhost:4173/assets/index-CkFmkQjD.js,4,0,0
+1784136484754,42,API - GET Courses,200,OK,Load - 10 users 1-1,text,true,,6738,366,3,3,http://localhost:5050/api/v1/courses?page=1&limit=20,42,0,0
+1784136485009,3,Web - GET index.html,200,OK,Load - 10 users 1-3,text,true,,791,117,3,3,http://localhost:4173/,3,0,1
+1784136485113,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-2,text,true,,5891,142,3,3,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136485302,4,Web - GET index.html,200,OK,Load - 10 users 1-1,text,true,,791,117,3,3,http://localhost:4173/,4,0,0
+1784136485518,4,Web - GET JS bundle,200,OK,Load - 10 users 1-3,text,true,,177350,141,3,3,http://localhost:4173/assets/index-CkFmkQjD.js,4,0,0
+1784136485622,44,API - GET Courses,200,OK,Load - 10 users 1-2,text,true,,6738,366,3,3,http://localhost:5050/api/v1/courses?page=1&limit=20,44,0,0
+1784136485812,3,Web - GET JS bundle,200,OK,Load - 10 users 1-1,text,true,,177350,141,3,3,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136486025,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-3,text,true,,5891,142,3,3,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136486169,3,Web - GET index.html,200,OK,Load - 10 users 1-2,text,true,,791,117,3,3,http://localhost:4173/,3,0,0
+1784136486322,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-1,text,true,,5891,142,3,3,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136486534,42,API - GET Courses,200,OK,Load - 10 users 1-3,text,true,,6738,366,3,3,http://localhost:5050/api/v1/courses?page=1&limit=20,42,0,0
+1784136486677,3,Web - GET JS bundle,200,OK,Load - 10 users 1-2,text,true,,177350,141,3,3,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136486831,38,API - GET Courses,200,OK,Load - 10 users 1-1,text,true,,6738,366,3,3,http://localhost:5050/api/v1/courses?page=1&limit=20,38,0,0
+1784136487082,3,Web - GET index.html,200,OK,Load - 10 users 1-3,text,true,,791,117,4,4,http://localhost:4173/,3,0,0
+1784136487182,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-2,text,true,,5891,142,4,4,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136487375,3,Web - GET index.html,200,OK,Load - 10 users 1-1,text,true,,791,117,4,4,http://localhost:4173/,3,0,0
+1784136487475,43,API - GET Courses,200,OK,Load - 10 users 1-4,text,true,,6738,366,4,4,http://localhost:5050/api/v1/courses?page=1&limit=20,42,0,2
+1784136487589,4,Web - GET JS bundle,200,OK,Load - 10 users 1-3,text,true,,177350,141,4,4,http://localhost:4173/assets/index-CkFmkQjD.js,4,0,0
+1784136487688,39,API - GET Courses,200,OK,Load - 10 users 1-2,text,true,,6738,366,4,4,http://localhost:5050/api/v1/courses?page=1&limit=20,39,0,0
+1784136487881,4,Web - GET JS bundle,200,OK,Load - 10 users 1-1,text,true,,177350,141,4,4,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136488021,4,Web - GET index.html,200,OK,Load - 10 users 1-4,text,true,,791,117,4,4,http://localhost:4173/,4,0,1
+1784136488099,4,Web - GET CSS bundle,200,OK,Load - 10 users 1-3,text,true,,5891,142,4,4,http://localhost:4173/assets/index-DgVZD9jl.css,4,0,0
+1784136488233,4,Web - GET index.html,200,OK,Load - 10 users 1-2,text,true,,791,117,4,4,http://localhost:4173/,4,0,0
+1784136488389,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-1,text,true,,5891,142,4,4,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136488531,3,Web - GET JS bundle,200,OK,Load - 10 users 1-4,text,true,,177350,141,4,4,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136488609,43,API - GET Courses,200,OK,Load - 10 users 1-3,text,true,,6738,366,4,4,http://localhost:5050/api/v1/courses?page=1&limit=20,42,0,0
+1784136488740,4,Web - GET JS bundle,200,OK,Load - 10 users 1-2,text,true,,177350,141,4,4,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136488898,37,API - GET Courses,200,OK,Load - 10 users 1-1,text,true,,6738,366,4,4,http://localhost:5050/api/v1/courses?page=1&limit=20,37,0,0
+1784136489040,4,Web - GET CSS bundle,200,OK,Load - 10 users 1-4,text,true,,5891,142,4,4,http://localhost:4173/assets/index-DgVZD9jl.css,4,0,0
+1784136489156,3,Web - GET index.html,200,OK,Load - 10 users 1-3,text,true,,791,117,4,4,http://localhost:4173/,3,0,0
+1784136489249,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-2,text,true,,5891,142,4,4,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136489439,4,Web - GET index.html,200,OK,Load - 10 users 1-1,text,true,,791,117,4,4,http://localhost:4173/,3,0,0
+1784136489550,44,API - GET Courses,200,OK,Load - 10 users 1-4,text,true,,6738,366,4,4,http://localhost:5050/api/v1/courses?page=1&limit=20,44,0,0
+1784136489665,3,Web - GET JS bundle,200,OK,Load - 10 users 1-3,text,true,,177350,141,4,4,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136489756,38,API - GET Courses,200,OK,Load - 10 users 1-2,text,true,,6738,366,4,4,http://localhost:5050/api/v1/courses?page=1&limit=20,38,0,0
+1784136489945,4,Web - GET JS bundle,200,OK,Load - 10 users 1-1,text,true,,177350,141,4,4,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136490100,2,Web - GET index.html,200,OK,Load - 10 users 1-4,text,true,,791,117,5,5,http://localhost:4173/,2,0,0
+1784136490174,4,Web - GET CSS bundle,200,OK,Load - 10 users 1-3,text,true,,5891,142,5,5,http://localhost:4173/assets/index-DgVZD9jl.css,4,0,0
+1784136490301,3,Web - GET index.html,200,OK,Load - 10 users 1-2,text,true,,791,117,5,5,http://localhost:4173/,3,0,0
+1784136490455,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-1,text,true,,5891,142,5,5,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136490475,39,API - GET Courses,200,OK,Load - 10 users 1-5,text,true,,6738,366,5,5,http://localhost:5050/api/v1/courses?page=1&limit=20,39,0,2
+1784136490605,4,Web - GET JS bundle,200,OK,Load - 10 users 1-4,text,true,,177350,141,5,5,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136490683,37,API - GET Courses,200,OK,Load - 10 users 1-3,text,true,,6738,366,5,5,http://localhost:5050/api/v1/courses?page=1&limit=20,37,0,0
+1784136490810,4,Web - GET JS bundle,200,OK,Load - 10 users 1-2,text,true,,177350,141,5,5,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136490962,39,API - GET Courses,200,OK,Load - 10 users 1-1,text,true,,6738,366,5,5,http://localhost:5050/api/v1/courses?page=1&limit=20,39,0,0
+1784136491021,7,Web - GET index.html,200,OK,Load - 10 users 1-5,text,true,,791,117,5,5,http://localhost:4173/,7,0,2
+1784136491114,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-4,text,true,,5891,142,5,5,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136491225,3,Web - GET index.html,200,OK,Load - 10 users 1-3,text,true,,791,117,5,5,http://localhost:4173/,3,0,0
+1784136491316,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-2,text,true,,5891,142,5,5,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136491507,3,Web - GET index.html,200,OK,Load - 10 users 1-1,text,true,,791,117,5,5,http://localhost:4173/,3,0,0
+1784136491534,2,Web - GET JS bundle,200,OK,Load - 10 users 1-5,text,true,,177350,141,5,5,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136491623,44,API - GET Courses,200,OK,Load - 10 users 1-4,text,true,,6738,366,5,5,http://localhost:5050/api/v1/courses?page=1&limit=20,43,0,0
+1784136491734,3,Web - GET JS bundle,200,OK,Load - 10 users 1-3,text,true,,177350,141,5,5,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136491823,38,API - GET Courses,200,OK,Load - 10 users 1-2,text,true,,6738,366,5,5,http://localhost:5050/api/v1/courses?page=1&limit=20,38,0,0
+1784136492014,3,Web - GET JS bundle,200,OK,Load - 10 users 1-1,text,true,,177350,141,5,5,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136492042,4,Web - GET CSS bundle,200,OK,Load - 10 users 1-5,text,true,,5891,142,5,5,http://localhost:4173/assets/index-DgVZD9jl.css,4,0,0
+1784136492172,3,Web - GET index.html,200,OK,Load - 10 users 1-4,text,true,,791,117,5,5,http://localhost:4173/,3,0,0
+1784136492243,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-3,text,true,,5891,142,5,5,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136492366,3,Web - GET index.html,200,OK,Load - 10 users 1-2,text,true,,791,117,5,5,http://localhost:4173/,3,0,0
+1784136492523,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-1,text,true,,5891,142,5,5,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136492551,39,API - GET Courses,200,OK,Load - 10 users 1-5,text,true,,6738,366,5,5,http://localhost:5050/api/v1/courses?page=1&limit=20,39,0,0
+1784136492680,4,Web - GET JS bundle,200,OK,Load - 10 users 1-4,text,true,,177350,141,5,5,http://localhost:4173/assets/index-CkFmkQjD.js,4,0,0
+1784136492752,38,API - GET Courses,200,OK,Load - 10 users 1-3,text,true,,6738,366,5,5,http://localhost:5050/api/v1/courses?page=1&limit=20,38,0,0
+1784136492871,5,Web - GET JS bundle,200,OK,Load - 10 users 1-2,text,true,,177350,141,5,5,http://localhost:4173/assets/index-CkFmkQjD.js,4,0,0
+1784136493032,38,API - GET Courses,200,OK,Load - 10 users 1-1,text,true,,6738,366,6,6,http://localhost:5050/api/v1/courses?page=1&limit=20,37,0,0
+1784136493095,3,Web - GET index.html,200,OK,Load - 10 users 1-5,text,true,,791,117,6,6,http://localhost:4173/,3,0,0
+1784136493190,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-4,text,true,,5891,142,6,6,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136493295,3,Web - GET index.html,200,OK,Load - 10 users 1-3,text,true,,791,117,6,6,http://localhost:4173/,3,0,0
+1784136493380,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-2,text,true,,5891,142,6,6,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136493475,37,API - GET Courses,200,OK,Load - 10 users 1-6,text,true,,6738,366,6,6,http://localhost:5050/api/v1/courses?page=1&limit=20,37,0,1
+1784136493576,3,Web - GET index.html,200,OK,Load - 10 users 1-1,text,true,,791,117,6,6,http://localhost:4173/,3,0,0
+1784136493604,4,Web - GET JS bundle,200,OK,Load - 10 users 1-5,text,true,,177350,141,6,6,http://localhost:4173/assets/index-CkFmkQjD.js,4,0,0
+1784136493697,36,API - GET Courses,200,OK,Load - 10 users 1-4,text,true,,6738,366,6,6,http://localhost:5050/api/v1/courses?page=1&limit=20,36,0,0
+1784136493802,4,Web - GET JS bundle,200,OK,Load - 10 users 1-3,text,true,,177350,141,6,6,http://localhost:4173/assets/index-CkFmkQjD.js,4,0,0
+1784136493889,38,API - GET Courses,200,OK,Load - 10 users 1-2,text,true,,6738,366,6,6,http://localhost:5050/api/v1/courses?page=1&limit=20,38,0,0
+1784136494017,4,Web - GET index.html,200,OK,Load - 10 users 1-6,text,true,,791,117,6,6,http://localhost:4173/,4,0,1
+1784136494085,3,Web - GET JS bundle,200,OK,Load - 10 users 1-1,text,true,,177350,141,6,6,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136494114,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-5,text,true,,5891,142,6,6,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136494238,4,Web - GET index.html,200,OK,Load - 10 users 1-4,text,true,,791,117,6,6,http://localhost:4173/,4,0,0
+1784136494307,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-3,text,true,,5891,142,6,6,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136494433,3,Web - GET index.html,200,OK,Load - 10 users 1-2,text,true,,791,117,6,6,http://localhost:4173/,3,0,0
+1784136494525,4,Web - GET JS bundle,200,OK,Load - 10 users 1-6,text,true,,177350,141,6,6,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136494590,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-1,text,true,,5891,142,6,6,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136494621,38,API - GET Courses,200,OK,Load - 10 users 1-5,text,true,,6738,366,6,6,http://localhost:5050/api/v1/courses?page=1&limit=20,38,0,0
+1784136494747,4,Web - GET JS bundle,200,OK,Load - 10 users 1-4,text,true,,177350,141,6,6,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136494816,38,API - GET Courses,200,OK,Load - 10 users 1-3,text,true,,6738,366,6,6,http://localhost:5050/api/v1/courses?page=1&limit=20,38,0,0
+1784136494939,3,Web - GET JS bundle,200,OK,Load - 10 users 1-2,text,true,,177350,141,6,6,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136495029,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-6,text,true,,5891,142,6,6,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136495099,37,API - GET Courses,200,OK,Load - 10 users 1-1,text,true,,6738,366,6,6,http://localhost:5050/api/v1/courses?page=1&limit=20,37,0,0
+1784136495165,3,Web - GET index.html,200,OK,Load - 10 users 1-5,text,true,,791,117,6,6,http://localhost:4173/,3,0,0
+1784136495257,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-4,text,true,,5891,142,6,6,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136495356,3,Web - GET index.html,200,OK,Load - 10 users 1-3,text,true,,791,117,6,6,http://localhost:4173/,3,0,0
+1784136495448,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-2,text,true,,5891,142,6,6,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136495538,39,API - GET Courses,200,OK,Load - 10 users 1-6,text,true,,6738,366,6,6,http://localhost:5050/api/v1/courses?page=1&limit=20,39,0,0
+1784136495642,4,Web - GET index.html,200,OK,Load - 10 users 1-1,text,true,,791,117,6,6,http://localhost:4173/,4,0,0
+1784136495674,4,Web - GET JS bundle,200,OK,Load - 10 users 1-5,text,true,,177350,141,6,6,http://localhost:4173/assets/index-CkFmkQjD.js,4,0,0
+1784136495766,37,API - GET Courses,200,OK,Load - 10 users 1-4,text,true,,6738,366,6,6,http://localhost:5050/api/v1/courses?page=1&limit=20,37,0,0
+1784136495864,4,Web - GET JS bundle,200,OK,Load - 10 users 1-3,text,true,,177350,141,6,6,http://localhost:4173/assets/index-CkFmkQjD.js,4,0,0
+1784136495957,39,API - GET Courses,200,OK,Load - 10 users 1-2,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,39,0,0
+1784136496082,3,Web - GET index.html,200,OK,Load - 10 users 1-6,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136496149,4,Web - GET JS bundle,200,OK,Load - 10 users 1-1,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136496184,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-5,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136496309,3,Web - GET index.html,200,OK,Load - 10 users 1-4,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136496374,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-3,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136496501,3,Web - GET index.html,200,OK,Load - 10 users 1-2,text,true,,791,117,7,7,http://localhost:4173/,2,0,0
+1784136496474,43,API - GET Courses,200,OK,Load - 10 users 1-7,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,43,0,1
+1784136496591,4,Web - GET JS bundle,200,OK,Load - 10 users 1-6,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136496655,4,Web - GET CSS bundle,200,OK,Load - 10 users 1-1,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,4,0,0
+1784136496694,37,API - GET Courses,200,OK,Load - 10 users 1-5,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,37,0,0
+1784136496818,4,Web - GET JS bundle,200,OK,Load - 10 users 1-4,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136496882,37,API - GET Courses,200,OK,Load - 10 users 1-3,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,37,0,0
+1784136497006,4,Web - GET JS bundle,200,OK,Load - 10 users 1-2,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136497022,5,Web - GET index.html,200,OK,Load - 10 users 1-7,text,true,,791,117,7,7,http://localhost:4173/,5,0,2
+1784136497099,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-6,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136497165,38,API - GET Courses,200,OK,Load - 10 users 1-1,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,38,0,0
+1784136497237,3,Web - GET index.html,200,OK,Load - 10 users 1-5,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136497328,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-4,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136497421,3,Web - GET index.html,200,OK,Load - 10 users 1-3,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136497515,4,Web - GET CSS bundle,200,OK,Load - 10 users 1-2,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,4,0,0
+1784136497532,3,Web - GET JS bundle,200,OK,Load - 10 users 1-7,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136497605,38,API - GET Courses,200,OK,Load - 10 users 1-6,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,38,0,0
+1784136497709,3,Web - GET index.html,200,OK,Load - 10 users 1-1,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136497746,2,Web - GET JS bundle,200,OK,Load - 10 users 1-5,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136497836,38,API - GET Courses,200,OK,Load - 10 users 1-4,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,38,0,0
+1784136497930,3,Web - GET JS bundle,200,OK,Load - 10 users 1-3,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136498041,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-7,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136498025,37,API - GET Courses,200,OK,Load - 10 users 1-2,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,37,0,0
+1784136498147,2,Web - GET index.html,200,OK,Load - 10 users 1-6,text,true,,791,117,7,7,http://localhost:4173/,2,0,0
+1784136498214,4,Web - GET JS bundle,200,OK,Load - 10 users 1-1,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,4,0,0
+1784136498254,4,Web - GET CSS bundle,200,OK,Load - 10 users 1-5,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,4,0,0
+1784136498380,3,Web - GET index.html,200,OK,Load - 10 users 1-4,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136498438,4,Web - GET CSS bundle,200,OK,Load - 10 users 1-3,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,4,0,0
+1784136498565,3,Web - GET index.html,200,OK,Load - 10 users 1-2,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136498550,43,API - GET Courses,200,OK,Load - 10 users 1-7,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,43,0,0
+1784136498655,3,Web - GET JS bundle,200,OK,Load - 10 users 1-6,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136498724,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-1,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136498764,37,API - GET Courses,200,OK,Load - 10 users 1-5,text,true,,6738,366,6,6,http://localhost:5050/api/v1/courses?page=1&limit=20,37,0,0
+1784136498889,3,Web - GET JS bundle,200,OK,Load - 10 users 1-4,text,true,,177350,141,6,6,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136498947,39,API - GET Courses,200,OK,Load - 10 users 1-3,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,39,0,0
+1784136499073,3,Web - GET JS bundle,200,OK,Load - 10 users 1-2,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136499095,3,Web - GET index.html,200,OK,Load - 10 users 1-7,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136499163,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-6,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136499307,3,Web - GET index.html,200,OK,Load - 10 users 1-5,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136499398,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-4,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136499489,3,Web - GET index.html,200,OK,Load - 10 users 1-3,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136499475,45,API - GET Courses,200,OK,Load - 10 users 1-8,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,45,0,1
+1784136499580,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-2,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136499604,3,Web - GET JS bundle,200,OK,Load - 10 users 1-7,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136499668,38,API - GET Courses,200,OK,Load - 10 users 1-6,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,38,0,0
+1784136499815,4,Web - GET JS bundle,200,OK,Load - 10 users 1-5,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136499906,37,API - GET Courses,200,OK,Load - 10 users 1-4,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,37,0,0
+1784136499998,2,Web - GET JS bundle,200,OK,Load - 10 users 1-3,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136500023,4,Web - GET index.html,200,OK,Load - 10 users 1-8,text,true,,791,117,7,7,http://localhost:4173/,3,0,1
+1784136500113,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-7,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136500089,38,API - GET Courses,200,OK,Load - 10 users 1-2,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,38,0,0
+1784136500212,3,Web - GET index.html,200,OK,Load - 10 users 1-6,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136500323,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-5,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136500449,2,Web - GET index.html,200,OK,Load - 10 users 1-4,text,true,,791,117,7,7,http://localhost:4173/,2,0,0
+1784136500506,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-3,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136500532,3,Web - GET JS bundle,200,OK,Load - 10 users 1-8,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136500629,2,Web - GET index.html,200,OK,Load - 10 users 1-2,text,true,,791,117,7,7,http://localhost:4173/,2,0,0
+1784136500617,43,API - GET Courses,200,OK,Load - 10 users 1-7,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,43,0,0
+1784136500721,3,Web - GET JS bundle,200,OK,Load - 10 users 1-6,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136500832,37,API - GET Courses,200,OK,Load - 10 users 1-5,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,37,0,0
+1784136500956,3,Web - GET JS bundle,200,OK,Load - 10 users 1-4,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136501039,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-8,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136501015,38,API - GET Courses,200,OK,Load - 10 users 1-3,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,38,0,0
+1784136501137,4,Web - GET JS bundle,200,OK,Load - 10 users 1-2,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,4,0,0
+1784136501165,2,Web - GET index.html,200,OK,Load - 10 users 1-7,text,true,,791,117,7,7,http://localhost:4173/,2,0,0
+1784136501227,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-6,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136501372,3,Web - GET index.html,200,OK,Load - 10 users 1-5,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136501464,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-4,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136501556,3,Web - GET index.html,200,OK,Load - 10 users 1-3,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136501548,43,API - GET Courses,200,OK,Load - 10 users 1-8,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,42,0,0
+1784136501647,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-2,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136501673,4,Web - GET JS bundle,200,OK,Load - 10 users 1-7,text,true,,177350,141,6,6,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136501732,48,API - GET Courses,200,OK,Load - 10 users 1-6,text,true,,6738,366,6,6,http://localhost:5050/api/v1/courses?page=1&limit=20,48,0,0
+1784136501881,3,Web - GET JS bundle,200,OK,Load - 10 users 1-5,text,true,,177350,141,6,6,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136501972,37,API - GET Courses,200,OK,Load - 10 users 1-4,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,37,0,0
+1784136502064,4,Web - GET JS bundle,200,OK,Load - 10 users 1-3,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136502093,3,Web - GET index.html,200,OK,Load - 10 users 1-8,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136502179,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-7,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136502285,3,Web - GET index.html,200,OK,Load - 10 users 1-6,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136502386,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-5,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136502472,43,API - GET Courses,200,OK,Load - 10 users 1-9,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,43,0,1
+1784136502515,2,Web - GET index.html,200,OK,Load - 10 users 1-4,text,true,,791,117,7,7,http://localhost:4173/,2,0,0
+1784136502569,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-3,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136502597,2,Web - GET JS bundle,200,OK,Load - 10 users 1-8,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136502686,39,API - GET Courses,200,OK,Load - 10 users 1-7,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,39,0,0
+1784136502794,3,Web - GET JS bundle,200,OK,Load - 10 users 1-6,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136502895,37,API - GET Courses,200,OK,Load - 10 users 1-5,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,37,0,0
+1784136503022,3,Web - GET index.html,200,OK,Load - 10 users 1-9,text,true,,791,117,7,7,http://localhost:4173/,3,0,1
+1784136503023,2,Web - GET JS bundle,200,OK,Load - 10 users 1-4,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136503100,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-8,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136503078,37,API - GET Courses,200,OK,Load - 10 users 1-3,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,37,0,0
+1784136503231,3,Web - GET index.html,200,OK,Load - 10 users 1-7,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136503300,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-6,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136503438,3,Web - GET index.html,200,OK,Load - 10 users 1-5,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136503531,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-4,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136503530,3,Web - GET JS bundle,200,OK,Load - 10 users 1-9,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136503620,3,Web - GET index.html,200,OK,Load - 10 users 1-3,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136503607,42,API - GET Courses,200,OK,Load - 10 users 1-8,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,42,0,0
+1784136503738,4,Web - GET JS bundle,200,OK,Load - 10 users 1-7,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136503809,38,API - GET Courses,200,OK,Load - 10 users 1-6,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,38,0,0
+1784136503945,3,Web - GET JS bundle,200,OK,Load - 10 users 1-5,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136504038,4,Web - GET CSS bundle,200,OK,Load - 10 users 1-9,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,4,0,0
+1784136504039,37,API - GET Courses,200,OK,Load - 10 users 1-4,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,37,0,0
+1784136504129,3,Web - GET JS bundle,200,OK,Load - 10 users 1-3,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136504149,3,Web - GET index.html,200,OK,Load - 10 users 1-8,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136504243,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-7,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136504353,3,Web - GET index.html,200,OK,Load - 10 users 1-6,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136504454,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-5,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136504582,4,Web - GET index.html,200,OK,Load - 10 users 1-4,text,true,,791,117,7,7,http://localhost:4173/,4,0,0
+1784136504543,44,API - GET Courses,200,OK,Load - 10 users 1-9,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,44,0,0
+1784136504638,4,Web - GET CSS bundle,200,OK,Load - 10 users 1-3,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,4,0,0
+1784136504655,3,Web - GET JS bundle,200,OK,Load - 10 users 1-8,text,true,,177350,141,6,6,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136504752,37,API - GET Courses,200,OK,Load - 10 users 1-7,text,true,,6738,366,6,6,http://localhost:5050/api/v1/courses?page=1&limit=20,37,0,0
+1784136504861,3,Web - GET JS bundle,200,OK,Load - 10 users 1-6,text,true,,177350,141,6,6,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136504963,37,API - GET Courses,200,OK,Load - 10 users 1-5,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,37,0,0
+1784136505090,3,Web - GET index.html,200,OK,Load - 10 users 1-9,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136505091,3,Web - GET JS bundle,200,OK,Load - 10 users 1-4,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136505164,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-8,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136505290,3,Web - GET index.html,200,OK,Load - 10 users 1-7,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136505370,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-6,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136505506,3,Web - GET index.html,200,OK,Load - 10 users 1-5,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136505473,43,API - GET Courses,200,OK,Load - 10 users 1-10,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,43,0,2
+1784136505599,1,Web - GET CSS bundle,200,OK,Load - 10 users 1-4,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,1,0,0
+1784136505597,3,Web - GET JS bundle,200,OK,Load - 10 users 1-9,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136505673,38,API - GET Courses,200,OK,Load - 10 users 1-8,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,38,0,0
+1784136505799,3,Web - GET JS bundle,200,OK,Load - 10 users 1-7,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136505879,37,API - GET Courses,200,OK,Load - 10 users 1-6,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,37,0,0
+1784136506014,3,Web - GET JS bundle,200,OK,Load - 10 users 1-5,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136506023,4,Web - GET index.html,200,OK,Load - 10 users 1-10,text,true,,791,117,7,7,http://localhost:4173/,4,0,2
+1784136506103,1,Web - GET CSS bundle,200,OK,Load - 10 users 1-9,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,1,0,0
+1784136506103,47,API - GET Courses,200,OK,Load - 10 users 1-4,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,47,0,0
+1784136506213,3,Web - GET index.html,200,OK,Load - 10 users 1-8,text,true,,791,117,7,7,http://localhost:4173/,3,0,0
+1784136506308,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-7,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136506422,4,Web - GET index.html,200,OK,Load - 10 users 1-6,text,true,,791,117,7,7,http://localhost:4173/,4,0,0
+1784136506526,6,Web - GET CSS bundle,200,OK,Load - 10 users 1-5,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,6,0,0
+1784136506532,5,Web - GET JS bundle,200,OK,Load - 10 users 1-10,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,5,0,0
+1784136506606,35,API - GET Courses,200,OK,Load - 10 users 1-9,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,35,0,0
+1784136506654,8,Web - GET index.html,200,OK,Load - 10 users 1-4,text,true,,791,117,7,7,http://localhost:4173/,8,0,0
+1784136506721,3,Web - GET JS bundle,200,OK,Load - 10 users 1-8,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136506822,35,API - GET Courses,200,OK,Load - 10 users 1-7,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,35,0,0
+1784136506927,3,Web - GET JS bundle,200,OK,Load - 10 users 1-6,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136507038,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-10,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136507034,35,API - GET Courses,200,OK,Load - 10 users 1-5,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,35,0,0
+1784136507146,1,Web - GET index.html,200,OK,Load - 10 users 1-9,text,true,,791,117,7,7,http://localhost:4173/,1,0,0
+1784136507163,2,Web - GET JS bundle,200,OK,Load - 10 users 1-4,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,1,0,0
+1784136507229,1,Web - GET CSS bundle,200,OK,Load - 10 users 1-8,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,1,0,0
+1784136507358,1,Web - GET index.html,200,OK,Load - 10 users 1-7,text,true,,791,117,7,7,http://localhost:4173/,1,0,0
+1784136507433,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-6,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136507574,2,Web - GET index.html,200,OK,Load - 10 users 1-5,text,true,,791,117,7,7,http://localhost:4173/,2,0,0
+1784136507547,40,API - GET Courses,200,OK,Load - 10 users 1-10,text,true,,6738,366,7,7,http://localhost:5050/api/v1/courses?page=1&limit=20,40,0,0
+1784136507652,3,Web - GET JS bundle,200,OK,Load - 10 users 1-9,text,true,,177350,141,7,7,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136507667,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-4,text,true,,5891,142,7,7,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136507731,34,API - GET Courses,200,OK,Load - 10 users 1-8,text,true,,6738,366,6,6,http://localhost:5050/api/v1/courses?page=1&limit=20,34,0,0
+1784136507865,1,Web - GET JS bundle,200,OK,Load - 10 users 1-7,text,true,,177350,141,6,6,http://localhost:4173/assets/index-CkFmkQjD.js,1,0,0
+1784136507940,34,API - GET Courses,200,OK,Load - 10 users 1-6,text,true,,6738,366,6,6,http://localhost:5050/api/v1/courses?page=1&limit=20,33,0,0
+1784136508077,3,Web - GET JS bundle,200,OK,Load - 10 users 1-5,text,true,,177350,141,6,6,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136508089,2,Web - GET index.html,200,OK,Load - 10 users 1-10,text,true,,791,117,6,6,http://localhost:4173/,2,0,0
+1784136508160,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-9,text,true,,5891,142,6,6,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136508269,2,Web - GET index.html,200,OK,Load - 10 users 1-8,text,true,,791,117,6,6,http://localhost:4173/,2,0,0
+1784136508371,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-7,text,true,,5891,142,6,6,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136508479,1,Web - GET index.html,200,OK,Load - 10 users 1-6,text,true,,791,117,6,6,http://localhost:4173/,1,0,0
+1784136508585,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-5,text,true,,5891,142,6,6,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136508596,3,Web - GET JS bundle,200,OK,Load - 10 users 1-10,text,true,,177350,141,6,6,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136508668,70,API - GET Courses,200,OK,Load - 10 users 1-9,text,true,,6739,366,6,6,http://localhost:5050/api/v1/courses?page=1&limit=20,70,0,0
+1784136508777,2,Web - GET JS bundle,200,OK,Load - 10 users 1-8,text,true,,177350,141,6,6,http://localhost:4173/assets/index-CkFmkQjD.js,1,0,0
+1784136508879,37,API - GET Courses,200,OK,Load - 10 users 1-7,text,true,,6738,366,6,6,http://localhost:5050/api/v1/courses?page=1&limit=20,37,0,0
+1784136508981,2,Web - GET JS bundle,200,OK,Load - 10 users 1-6,text,true,,177350,141,6,6,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136509101,6,Web - GET CSS bundle,200,OK,Load - 10 users 1-10,text,true,,5891,142,6,6,http://localhost:4173/assets/index-DgVZD9jl.css,6,0,0
+1784136509093,35,API - GET Courses,200,OK,Load - 10 users 1-5,text,true,,6738,366,6,6,http://localhost:5050/api/v1/courses?page=1&limit=20,35,0,0
+1784136509244,2,Web - GET index.html,200,OK,Load - 10 users 1-9,text,true,,791,117,6,6,http://localhost:4173/,2,0,0
+1784136509281,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-8,text,true,,5891,142,6,6,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136509422,2,Web - GET index.html,200,OK,Load - 10 users 1-7,text,true,,791,117,6,6,http://localhost:4173/,2,0,0
+1784136509489,4,Web - GET CSS bundle,200,OK,Load - 10 users 1-6,text,true,,5891,142,6,6,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136509634,1,Web - GET index.html,200,OK,Load - 10 users 1-5,text,true,,791,117,6,6,http://localhost:4173/,1,0,0
+1784136509613,35,API - GET Courses,200,OK,Load - 10 users 1-10,text,true,,6738,366,6,6,http://localhost:5050/api/v1/courses?page=1&limit=20,34,0,0
+1784136509751,3,Web - GET JS bundle,200,OK,Load - 10 users 1-9,text,true,,177350,141,6,6,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136509790,43,API - GET Courses,200,OK,Load - 10 users 1-8,text,true,,6738,366,6,6,http://localhost:5050/api/v1/courses?page=1&limit=20,43,0,0
+1784136509928,3,Web - GET JS bundle,200,OK,Load - 10 users 1-7,text,true,,177350,141,6,6,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136509998,42,API - GET Courses,200,OK,Load - 10 users 1-6,text,true,,6738,366,6,6,http://localhost:5050/api/v1/courses?page=1&limit=20,42,0,0
+1784136510153,2,Web - GET index.html,200,OK,Load - 10 users 1-10,text,true,,791,117,6,6,http://localhost:4173/,2,0,0
+1784136510140,15,Web - GET JS bundle,200,OK,Load - 10 users 1-5,text,true,,177350,141,6,6,http://localhost:4173/assets/index-CkFmkQjD.js,15,0,0
+1784136510269,22,Web - GET CSS bundle,200,OK,Load - 10 users 1-9,text,true,,5891,142,6,6,http://localhost:4173/assets/index-DgVZD9jl.css,22,0,0
+1784136510336,3,Web - GET index.html,200,OK,Load - 10 users 1-8,text,true,,791,117,6,6,http://localhost:4173/,3,0,0
+1784136510434,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-7,text,true,,5891,142,6,6,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136510557,2,Web - GET index.html,200,OK,Load - 10 users 1-6,text,true,,791,117,6,6,http://localhost:4173/,2,0,0
+1784136510656,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-5,text,true,,5891,142,6,6,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136510661,1,Web - GET JS bundle,200,OK,Load - 10 users 1-10,text,true,,177350,141,5,5,http://localhost:4173/assets/index-CkFmkQjD.js,1,0,0
+1784136510796,41,API - GET Courses,200,OK,Load - 10 users 1-9,text,true,,6738,366,5,5,http://localhost:5050/api/v1/courses?page=1&limit=20,41,0,0
+1784136510845,1,Web - GET JS bundle,200,OK,Load - 10 users 1-8,text,true,,177350,141,5,5,http://localhost:4173/assets/index-CkFmkQjD.js,1,0,0
+1784136510937,48,API - GET Courses,200,OK,Load - 10 users 1-7,text,true,,6738,366,5,5,http://localhost:5050/api/v1/courses?page=1&limit=20,48,0,0
+1784136511064,2,Web - GET JS bundle,200,OK,Load - 10 users 1-6,text,true,,177350,141,5,5,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136511168,1,Web - GET CSS bundle,200,OK,Load - 10 users 1-10,text,true,,5891,142,5,5,http://localhost:4173/assets/index-DgVZD9jl.css,1,0,0
+1784136511338,1,Web - GET index.html,200,OK,Load - 10 users 1-9,text,true,,791,117,5,5,http://localhost:4173/,1,0,0
+1784136511350,1,Web - GET CSS bundle,200,OK,Load - 10 users 1-8,text,true,,5891,142,5,5,http://localhost:4173/assets/index-DgVZD9jl.css,1,0,0
+1784136511489,1,Web - GET index.html,200,OK,Load - 10 users 1-7,text,true,,791,117,5,5,http://localhost:4173/,1,0,0
+1784136511571,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-6,text,true,,5891,142,5,5,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136511671,58,API - GET Courses,200,OK,Load - 10 users 1-10,text,true,,6738,366,5,5,http://localhost:5050/api/v1/courses?page=1&limit=20,58,0,0
+1784136511844,2,Web - GET JS bundle,200,OK,Load - 10 users 1-9,text,true,,177350,141,5,5,http://localhost:4173/assets/index-CkFmkQjD.js,1,0,0
+1784136511856,42,API - GET Courses,200,OK,Load - 10 users 1-8,text,true,,6738,366,5,5,http://localhost:5050/api/v1/courses?page=1&limit=20,42,0,0
+1784136511995,2,Web - GET JS bundle,200,OK,Load - 10 users 1-7,text,true,,177350,141,5,5,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136512073,35,API - GET Courses,200,OK,Load - 10 users 1-6,text,true,,6738,366,5,5,http://localhost:5050/api/v1/courses?page=1&limit=20,35,0,0
+1784136512230,1,Web - GET index.html,200,OK,Load - 10 users 1-10,text,true,,791,117,5,5,http://localhost:4173/,1,0,0
+1784136512351,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-9,text,true,,5891,142,5,5,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136512404,3,Web - GET index.html,200,OK,Load - 10 users 1-8,text,true,,791,117,5,5,http://localhost:4173/,3,0,0
+1784136512497,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-7,text,true,,5891,142,5,5,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136512613,5,Web - GET index.html,200,OK,Load - 10 users 1-6,text,true,,791,117,5,5,http://localhost:4173/,5,0,0
+1784136512734,3,Web - GET JS bundle,200,OK,Load - 10 users 1-10,text,true,,177350,141,5,5,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136512857,42,API - GET Courses,200,OK,Load - 10 users 1-9,text,true,,6738,366,5,5,http://localhost:5050/api/v1/courses?page=1&limit=20,42,0,0
+1784136512907,2,Web - GET JS bundle,200,OK,Load - 10 users 1-8,text,true,,177350,141,5,5,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136513003,37,API - GET Courses,200,OK,Load - 10 users 1-7,text,true,,6738,366,5,5,http://localhost:5050/api/v1/courses?page=1&limit=20,37,0,0
+1784136513119,2,Web - GET JS bundle,200,OK,Load - 10 users 1-6,text,true,,177350,141,5,5,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136513241,1,Web - GET CSS bundle,200,OK,Load - 10 users 1-10,text,true,,5891,142,5,5,http://localhost:4173/assets/index-DgVZD9jl.css,1,0,0
+1784136513401,2,Web - GET index.html,200,OK,Load - 10 users 1-9,text,true,,791,117,5,5,http://localhost:4173/,1,0,0
+1784136513411,1,Web - GET CSS bundle,200,OK,Load - 10 users 1-8,text,true,,5891,142,5,5,http://localhost:4173/assets/index-DgVZD9jl.css,1,0,0
+1784136513542,2,Web - GET index.html,200,OK,Load - 10 users 1-7,text,true,,791,117,5,5,http://localhost:4173/,2,0,0
+1784136513625,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-6,text,true,,5891,142,5,5,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136513748,35,API - GET Courses,200,OK,Load - 10 users 1-10,text,true,,6738,366,4,4,http://localhost:5050/api/v1/courses?page=1&limit=20,35,0,0
+1784136513904,2,Web - GET JS bundle,200,OK,Load - 10 users 1-9,text,true,,177350,141,4,4,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136513913,35,API - GET Courses,200,OK,Load - 10 users 1-8,text,true,,6738,366,4,4,http://localhost:5050/api/v1/courses?page=1&limit=20,35,0,0
+1784136514049,2,Web - GET JS bundle,200,OK,Load - 10 users 1-7,text,true,,177350,141,4,4,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136514287,2,Web - GET index.html,200,OK,Load - 10 users 1-10,text,true,,791,117,4,4,http://localhost:4173/,2,0,0
+1784136514407,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-9,text,true,,5891,142,4,4,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136514450,2,Web - GET index.html,200,OK,Load - 10 users 1-8,text,true,,791,117,4,4,http://localhost:4173/,2,0,0
+1784136514556,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-7,text,true,,5891,142,4,4,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136514790,4,Web - GET JS bundle,200,OK,Load - 10 users 1-10,text,true,,177350,141,4,4,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136514912,35,API - GET Courses,200,OK,Load - 10 users 1-9,text,true,,6738,366,4,4,http://localhost:5050/api/v1/courses?page=1&limit=20,35,0,0
+1784136514953,2,Web - GET JS bundle,200,OK,Load - 10 users 1-8,text,true,,177350,141,4,4,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136515064,35,API - GET Courses,200,OK,Load - 10 users 1-7,text,true,,6738,366,4,4,http://localhost:5050/api/v1/courses?page=1&limit=20,35,0,0
+1784136515299,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-10,text,true,,5891,142,4,4,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136515452,2,Web - GET index.html,200,OK,Load - 10 users 1-9,text,true,,791,117,4,4,http://localhost:4173/,2,0,0
+1784136515460,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-8,text,true,,5891,142,4,4,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136515604,1,Web - GET index.html,200,OK,Load - 10 users 1-7,text,true,,791,117,4,4,http://localhost:4173/,1,0,0
+1784136515805,35,API - GET Courses,200,OK,Load - 10 users 1-10,text,true,,6738,366,4,4,http://localhost:5050/api/v1/courses?page=1&limit=20,35,0,0
+1784136515960,2,Web - GET JS bundle,200,OK,Load - 10 users 1-9,text,true,,177350,141,4,4,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136515967,35,API - GET Courses,200,OK,Load - 10 users 1-8,text,true,,6738,366,4,4,http://localhost:5050/api/v1/courses?page=1&limit=20,35,0,0
+1784136516110,3,Web - GET JS bundle,200,OK,Load - 10 users 1-7,text,true,,177350,141,4,4,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136516346,2,Web - GET index.html,200,OK,Load - 10 users 1-10,text,true,,791,117,4,4,http://localhost:4173/,2,0,0
+1784136516468,1,Web - GET CSS bundle,200,OK,Load - 10 users 1-9,text,true,,5891,142,4,4,http://localhost:4173/assets/index-DgVZD9jl.css,1,0,0
+1784136516505,2,Web - GET index.html,200,OK,Load - 10 users 1-8,text,true,,791,117,4,4,http://localhost:4173/,2,0,0
+1784136516619,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-7,text,true,,5891,142,4,4,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136516853,3,Web - GET JS bundle,200,OK,Load - 10 users 1-10,text,true,,177350,141,3,3,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136516975,37,API - GET Courses,200,OK,Load - 10 users 1-9,text,true,,6738,366,3,3,http://localhost:5050/api/v1/courses?page=1&limit=20,37,0,0
+1784136517009,4,Web - GET JS bundle,200,OK,Load - 10 users 1-8,text,true,,177350,141,3,3,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136517357,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-10,text,true,,5891,142,3,3,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136517514,3,Web - GET index.html,200,OK,Load - 10 users 1-9,text,true,,791,117,3,3,http://localhost:4173/,3,0,0
+1784136517518,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-8,text,true,,5891,142,3,3,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136517866,35,API - GET Courses,200,OK,Load - 10 users 1-10,text,true,,6738,366,3,3,http://localhost:5050/api/v1/courses?page=1&limit=20,35,0,0
+1784136518019,1,Web - GET JS bundle,200,OK,Load - 10 users 1-9,text,true,,177350,141,3,3,http://localhost:4173/assets/index-CkFmkQjD.js,1,0,0
+1784136518025,36,API - GET Courses,200,OK,Load - 10 users 1-8,text,true,,6738,366,3,3,http://localhost:5050/api/v1/courses?page=1&limit=20,36,0,0
+1784136518405,2,Web - GET index.html,200,OK,Load - 10 users 1-10,text,true,,791,117,3,3,http://localhost:4173/,1,0,0
+1784136518526,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-9,text,true,,5891,142,3,3,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136518566,4,Web - GET index.html,200,OK,Load - 10 users 1-8,text,true,,791,117,3,3,http://localhost:4173/,4,0,0
+1784136518908,3,Web - GET JS bundle,200,OK,Load - 10 users 1-10,text,true,,177350,141,3,3,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136519035,38,API - GET Courses,200,OK,Load - 10 users 1-9,text,true,,6738,366,3,3,http://localhost:5050/api/v1/courses?page=1&limit=20,38,0,0
+1784136519073,3,Web - GET JS bundle,200,OK,Load - 10 users 1-8,text,true,,177350,141,3,3,http://localhost:4173/assets/index-CkFmkQjD.js,2,0,0
+1784136519417,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-10,text,true,,5891,142,3,3,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136519578,2,Web - GET index.html,200,OK,Load - 10 users 1-9,text,true,,791,117,3,3,http://localhost:4173/,2,0,0
+1784136519582,1,Web - GET CSS bundle,200,OK,Load - 10 users 1-8,text,true,,5891,142,3,3,http://localhost:4173/assets/index-DgVZD9jl.css,1,0,0
+1784136519922,38,API - GET Courses,200,OK,Load - 10 users 1-10,text,true,,6738,366,2,2,http://localhost:5050/api/v1/courses?page=1&limit=20,38,0,0
+1784136520086,4,Web - GET JS bundle,200,OK,Load - 10 users 1-9,text,true,,177350,141,2,2,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136520466,4,Web - GET index.html,200,OK,Load - 10 users 1-10,text,true,,791,117,2,2,http://localhost:4173/,4,0,0
+1784136520594,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-9,text,true,,5891,142,2,2,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136520975,5,Web - GET JS bundle,200,OK,Load - 10 users 1-10,text,true,,177350,141,2,2,http://localhost:4173/assets/index-CkFmkQjD.js,4,0,0
+1784136521099,39,API - GET Courses,200,OK,Load - 10 users 1-9,text,true,,6738,366,2,2,http://localhost:5050/api/v1/courses?page=1&limit=20,39,0,0
+1784136521485,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-10,text,true,,5891,142,2,2,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0
+1784136521641,3,Web - GET index.html,200,OK,Load - 10 users 1-9,text,true,,791,117,2,2,http://localhost:4173/,3,0,0
+1784136521993,42,API - GET Courses,200,OK,Load - 10 users 1-10,text,true,,6738,366,2,2,http://localhost:5050/api/v1/courses?page=1&limit=20,42,0,0
+1784136522149,4,Web - GET JS bundle,200,OK,Load - 10 users 1-9,text,true,,177350,141,2,2,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136522538,3,Web - GET index.html,200,OK,Load - 10 users 1-10,text,true,,791,117,2,2,http://localhost:4173/,3,0,0
+1784136522654,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-9,text,true,,5891,142,2,2,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136523047,3,Web - GET JS bundle,200,OK,Load - 10 users 1-10,text,true,,177350,141,1,1,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136523554,2,Web - GET CSS bundle,200,OK,Load - 10 users 1-10,text,true,,5891,142,1,1,http://localhost:4173/assets/index-DgVZD9jl.css,2,0,0
+1784136524059,36,API - GET Courses,200,OK,Load - 10 users 1-10,text,true,,6738,366,1,1,http://localhost:5050/api/v1/courses?page=1&limit=20,36,0,0
+1784136524598,3,Web - GET index.html,200,OK,Load - 10 users 1-10,text,true,,791,117,1,1,http://localhost:4173/,3,0,0
+1784136525106,4,Web - GET JS bundle,200,OK,Load - 10 users 1-10,text,true,,177350,141,1,1,http://localhost:4173/assets/index-CkFmkQjD.js,3,0,0
+1784136525615,3,Web - GET CSS bundle,200,OK,Load - 10 users 1-10,text,true,,5891,142,1,1,http://localhost:4173/assets/index-DgVZD9jl.css,3,0,0

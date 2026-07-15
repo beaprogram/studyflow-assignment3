@@ -1,0 +1,15 @@
+# Grafana provisioning: wires up Prometheus as the default data source when the
+# container starts, so no manual set-up is needed in the UI.
+#
+# The URL uses the compose service name "prometheus", which Docker resolves on
+# the internal network between the two containers.
+
+apiVersion: 1
+
+datasources:
+  - name: Prometheus
+    type: prometheus
+    access: proxy
+    url: http://prometheus:9090
+    isDefault: true
+    editable: true

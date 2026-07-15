@@ -23,6 +23,10 @@ const courseSchema = new mongoose.Schema(
 // A given student cannot have two courses with the same code in the same term.
 courseSchema.index({ owner: 1, code: 1, term: 1 }, { unique: true });
 
+// Serves the list query: filter by owner AND return already sorted by
+// createdAt descending, so MongoDB does an index scan with no in-memory SORT.
+courseSchema.index({ owner: 1, createdAt: -1 });
+
 courseSchema.set('toJSON', {
   transform(_doc, ret) {
     delete ret.__v;

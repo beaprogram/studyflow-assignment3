@@ -1,27 +1,68 @@
 # JMeter Load Tests
 
-This folder will hold the JMeter test plan and the exported results.
+`StudyFlow-local.jmx` is the reproducible test plan used for the submitted
+results. It logs in once, extracts a bearer token, and then exercises the
+authenticated course-list endpoint plus the production client HTML, JavaScript,
+and CSS bundles. A 500 ms Constant Timer provides think time between requests.
 
-## Files (added as we go)
+## Two scenarios
 
-- `StudyFlow.jmx` — the test plan, with two thread groups:
-  - Light load: 10 users, 30s ramp-up.
-  - Moderate load: 50 users, 60s ramp-up.
-  Each group exercises the API endpoints (login, list courses, create course)
-  and the front-end bundle URLs, with a Constant Timer (think time) between
-  requests.
-- `baseline-light.csv`, `baseline-moderate.csv` — results before optimization.
-- `optimized-light.csv`, `optimized-moderate.csv` — results after all four
-  optimizations.
+The same parameterized load group is executed twice so both scenarios use an
+identical sampler tree:
 
-## Method
+- Light: 10 users, 30-second ramp-up, 10 loops per user.
+- Moderate: 50 users, 60-second ramp-up, 10 loops per user.
 
-1. Record the baseline against the deployed app (warm the Render service first
-   so cold-start time is not counted).
-2. Apply the four optimizations (`client/` and `api/`), redeploy.
-3. Re-run the identical plan and export the optimized CSVs.
-4. Compare average and 95th-percentile response times, requests/second, and
-   error rate; calculate percentage improvement per metric.
+Each CSV contains timestamp, elapsed time, response code, success flag, bytes,
+latency, connect time, URL, and thread counts. The four submitted runs contain
+4,808 samples in total and have a 0.00% error rate.
 
-The three worst bottlenecks identified from the baseline are documented in the
-report.
+## Commands
+
+Run from this directory while the API is on port 5050 and the optimized client
+preview is on port 4173:
+
+```bash
+# Light
+jmeter -n -t StudyFlow-local.jmx \
+  -Jthreads=10 -Jramp=30 -Jloops=10 \
+  -l optimized-light.csv
+
+# Moderate
+jmeter -n -t StudyFlow-local.jmx \
+  -Jthreads=50 -Jramp=60 -Jloops=10 \
+  -l optimized-moderate.csv
+```
+
+The baseline files were captured with the same plan and parameters before the
+four optimizations. `compare.py` calculates averages, p95 values, throughput,
+error rates, and percentage change:
+
+```bash
+python3 compare.py
+```
+
+## Results summary
+
+| Scenario | Metric | Baseline | Optimized | Improvement |
+|---|---:|---:|---:|---:|
+| Light | Average latency | 22.6 ms | 13.0 ms | 42.3% |
+| Light | p95 latency | 80 ms | 43 ms | 46.2% |
+| Light | Throughput | 8.25 req/s | 8.32 req/s | 0.9% |
+| Moderate | Average latency | 21.7 ms | 11.5 ms | 47.0% |
+| Moderate | p95 latency | 78 ms | 38 ms | 51.3% |
+| Moderate | Throughput | 24.92 req/s | 25.03 req/s | 0.4% |
+
+The JavaScript entry bundle fell from 578,126 bytes to 177,350 bytes (69.3%)
+after route-level code splitting. Course-list average latency fell by 48.5%
+under light load and 51.3% under moderate load after caching and indexing.
+
+## Files
+
+- `StudyFlow-local.jmx` - local reproducible plan used for the CSVs.
+- `StudyFlow.jmx` - deployment-target template; update host and bundle values
+  before using it against a deployment.
+- `baseline-light.csv`, `baseline-moderate.csv` - before measurements.
+- `optimized-light.csv`, `optimized-moderate.csv` - after measurements.
+- `report-*` - generated JMeter HTML dashboards for all four runs.
+- `compare.py` - before/after aggregation and percentage calculations.

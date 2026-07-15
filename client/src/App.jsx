@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Nav from './components/Nav.jsx'
 import ProtectedRoute from './components/ProtectedRoute.jsx'
@@ -5,12 +6,17 @@ import Login from './pages/Login.jsx'
 import Courses from './pages/Courses.jsx'
 import CreateCourse from './pages/CreateCourse.jsx'
 
-// BASELINE NOTE (Assignment 3):
-// Analytics pulls in the recharts library and is imported eagerly here, so it
-// ships inside the main bundle even for users who never open it. This is the
-// un-optimized baseline. Client-side optimization #1 (step 3) converts this to
-// a lazy-loaded route so recharts is code-split into its own chunk.
-import Analytics from './pages/Analytics.jsx'
+// CLIENT-SIDE OPTIMIZATION 1: route-level code splitting.
+//
+// Analytics pulls in the recharts charting library, which is by far the
+// heaviest dependency in the app. It used to be imported eagerly, so recharts
+// shipped inside the main bundle and every visitor downloaded and parsed it on
+// first load, even though most users never open the Analytics page.
+//
+// React.lazy + a dynamic import() tells Vite to emit recharts and this page as
+// a separate chunk. The main bundle shrinks, first render happens sooner, and
+// the chart code is fetched only when the user actually navigates to /analytics.
+const Analytics = lazy(() => import('./pages/Analytics.jsx'))
 
 export default function App() {
   return (
@@ -39,7 +45,10 @@ export default function App() {
             path="/analytics"
             element={
               <ProtectedRoute>
-                <Analytics />
+                {/* Suspense shows a fallback while the lazy chunk downloads. */}
+                <Suspense fallback={<p className="notice">Loading analytics…</p>}>
+                  <Analytics />
+                </Suspense>
               </ProtectedRoute>
             }
           />

@@ -19,3 +19,18 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Security headers (added in Assignment 3 after an OWASP ZAP baseline scan
+# reported missing anti-clickjacking and Content-Security-Policy headers on the
+# static front-end). The API already sets equivalent headers via helmet; these
+# bring the front-end tier up to the same standard.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://studyflow-api-yzno.onrender.com; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=()"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"

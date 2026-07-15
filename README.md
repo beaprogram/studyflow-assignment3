@@ -1,4 +1,4 @@
-# StudyFlow — Assignment 3
+# StudyFlow - Assignment 3
 
 Performance, resilience, and security work on the StudyFlow web application
 (CSCI 4177/5709, Summer 2026).
@@ -24,9 +24,9 @@ Each folder has its own README describing what to run and what the files are.
 
 - **API** (`api/`) is deployed on Render, backed by MongoDB Atlas. It exposes
   `/api/v1/auth/*`, `/api/v1/courses`, and the other StudyFlow endpoints.
-- **Client** (`client/`) is deployed on Netlify and talks to the API. In both
-  dev and production, `/api/*` is proxied to the Render backend, so there is no
-  CORS to configure (see `client/vite.config.js` and `client/netlify.toml`).
+- **Client** (`client/`) is a production Vite build. In development and on
+  Netlify, `/api/*` is proxied to the API so browser requests remain same-origin
+  (see `client/vite.config.js` and `client/netlify.toml`).
 
 ## The four optimizations
 
@@ -40,10 +40,23 @@ Server-side (in `api/`):
 1. In-memory caching of read-heavy endpoints.
 2. MongoDB indexing on the fields used to query and sort.
 
-Each is applied after the baseline is recorded, then re-measured. See
-`jmeter/README.md` for the before/after method.
+Each was applied after the baseline was recorded, then measured with the same
+JMeter plan. See `jmeter/README.md` for the before/after method and results.
 
-## Live URLs
+## Verification status
 
-- API base: `https://studyflow-api-yzno.onrender.com`
-- Client: _added after the Netlify deploy._
+- API smoke tests: 6/6 passing.
+- Client production build: passing; the main JavaScript bundle is 69.3% smaller
+  after code splitting.
+- JMeter: 4,808 submitted samples across four runs, 0.00% errors.
+- OWASP ZAP: final scan has no high- or medium-risk findings.
+- Monitoring: Prometheus target healthy; Grafana has six required panels.
+
+## Submission artifacts
+
+- `deliverables/StudyFlow_Assignment3_Report.pdf` - Brightspace report.
+- `deliverables/StudyFlow_Assignment3_Report.docx` - editable report copy.
+- `deliverables/Brightspace_Submission_Checklist.md` - final submission steps.
+- Git repository: `https://github.com/beaprogram/studyflow-assignment3`
+
+API deployment: `https://studyflow-api-yzno.onrender.com`

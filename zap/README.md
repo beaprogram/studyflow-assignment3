@@ -1,23 +1,42 @@
 # OWASP ZAP Security Scan
 
-Headless OWASP ZAP scan of the deployed application, plus evidence of fixes.
+The client was scanned in headless mode with the official stable ZAP container.
+The scan target was the production build served locally at
+`http://host.docker.internal:4173`.
 
-## Files (added as we go)
+## Evidence
 
-- `zap-report.html` (and/or `zap-report.json`) — the full scan report.
-- `remediation.md` — the vulnerabilities chosen for fixing, with the before/
-  after code or configuration snippets that address them.
+- `zap-report-before-web.html` and `.json` - baseline scan. It reports two
+  medium findings: missing Content Security Policy and missing anti-clickjacking
+  protection.
+- `zap-report-after-web.html` and `.json` - verified scan after remediation,
+  generated July 15, 2026 at 19:19 UTC. It contains no high- or medium-risk
+  findings. Only informational observations remain.
+- `remediation.md` - code/configuration evidence for both fixes.
 
-## Method
+## Reproduce the final scan
 
-1. Run ZAP in headless (baseline) mode against the deployed app URL.
-2. Review all high- and medium-severity findings.
-3. Fix at least two, with the change made in `api/` or `client/`.
-4. Re-scan (or confirm the specific finding is gone) and record the evidence.
+Build and start the client first:
 
-Example headless run (Docker):
-
+```bash
+cd client
+npm run build
+npm run preview -- --host 0.0.0.0
 ```
-docker run --rm -v "$(pwd)":/zap/wrk/:rw ghcr.io/zaproxy/zaproxy \
-  zap-baseline.py -t https://YOUR-APP-URL -r zap-report.html
+
+Then run ZAP from the repository root:
+
+```bash
+docker run --rm \
+  --add-host=host.docker.internal:host-gateway \
+  -v "$PWD/zap:/zap/wrk:rw" \
+  ghcr.io/zaproxy/zaproxy:stable \
+  zap-baseline.py \
+  -t http://host.docker.internal:4173 \
+  -m 1 \
+  -r zap-report-after-web.html \
+  -J zap-report-after-web.json
 ```
+
+ZAP may return exit code 2 for informational warnings. The JSON report is the
+authoritative evidence: its remaining alerts have `riskcode` 0.
