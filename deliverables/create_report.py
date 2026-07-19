@@ -724,6 +724,14 @@ def add_security(doc):
         "optimized local production preview after the fixes. Both HTML and JSON reports are "
         "stored under zap/."
     )
+    doc.add_paragraph(
+        "The headless ZAP baseline scan reported 9 alerts: 0 high, 2 medium, 5 low, and "
+        "2 informational. Both medium-severity findings are remediated below with "
+        "configuration snippets. The five low-severity alerts (Cross-Origin-Embedder-Policy, "
+        "Cross-Origin-Opener-Policy, Cross-Origin-Resource-Policy, Permissions-Policy, and "
+        "X-Content-Type-Options headers) are addressed by the same security-header changes "
+        "as defense in depth. The informational alerts require no remediation."
+    )
     doc.add_heading("Baseline findings and fixes", level=2)
     add_table(
         doc,
@@ -757,7 +765,9 @@ def add_security(doc):
         "0 high-risk and 0 medium-risk findings",
         "The July 15, 2026 after-scan crawled six URLs. Its only remaining alerts are informational: "
         "Modern Web Application and Storable but Non-Cacheable Content. The two required medium "
-        "findings are absent from the final JSON and HTML reports.",
+        "findings are absent from the final JSON and HTML reports. The content alert changed from "
+        "'Storable and Cacheable' to 'Storable but Non-Cacheable' because the new Cache-Control "
+        "headers took effect.",
     )
     doc.add_paragraph(
         "Evidence files: zap/zap-report-before-web.html, zap/zap-report-before-web.json, "
